@@ -1,0 +1,13 @@
+{
+  "name": "care-ai-monorepo",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "backend": "cd backend && ..\\venv\\Scripts\\python.exe -m uvicorn main:app --reload --port 8000",
+    "dev": "concurrently \"npm run dev --prefix frontend\" \"cd backend && ..\\venv\\Scripts\\python.exe -m uvicorn main:app --reload --port 8000\"",
+    "build": "npm run build --prefix frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}
